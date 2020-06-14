@@ -56,7 +56,7 @@
 
 	foreach ($challs['data'] as $metadata) {
 		echo "Processing: {$metadata['name']}", PHP_EOL;
-		$chall_info = json_decode(file_get_contents("https://ctf.hsctf.com/api/v1/challenges/{$metadata['id']}", false, $context), true);
+		$chall_info = json_decode(file_get_contents("{$LOGIN['url']}/api/v1/challenges/{$metadata['id']}", false, $context), true);
 		if (!$chall_info || !$chall_info['success']) {
 			echo 'Failed to process, skipping'; 
 			continue;
