@@ -1,20 +1,24 @@
-# CTFd Scraper
+# CTF Scraper
 
-[CTFd](https://ctfd.io/) is a popular platform used for Capture the Flag (CTF) competitons online. However, after the competitions end, most of the servers are taken down, and the challenges become unaccessible.
+Online CTFs are common way to learn to learn cybersecurity skills. Unfortunately, after the events end, most of the servers are taken down, and the challenges become unaccessible.
 
-This scraper downloads all the challenges from a CTFd server for archival purposes.
+This scraper downloads all the challenges and files from a CTF server for archival purposes.
+
+## Supported Platforms
+* CTFd
+* Tomahawque
 
 ## Usage
 
-You need to install [PHP](https://www.php.net). The script was tested on PHP 7.4.6 on Windows, but should work on other platforms as well. Input the URL, username, and password, and let the magic happen.
+You need to install [PHP](https://www.php.net). The script was tested on PHP 7.4.6 on Windows, but should work on other platforms as well. Input the metadata and your credentials, and let the magic happen.
 
 ```
-> php scraper.php
+> php (platform).php
 
-Welcome to the CTFd archiver
-CTFd URL (like "https://ctf.example.com"): THE URL OF YOUR CTF
-CTFd Username: THE USERNAME USED TO LOG IN TO THE CTF
-CTFd Password: THE PASSWORD USED TO LOG IN TO THE CTF
+Welcome to the (platform) archiver
+CTFd URL (like "https://ctf.example.com"): https://ctf.example.com
+CTFd Username: user
+CTFd Password: passw0rd
 Getting CSRF Nonce
 Logging in
 Retrieving Challenges List
@@ -26,7 +30,7 @@ Processing: Challenge #2
 The CTF has been archived successfully
 ```
 
-This script downloads everything into the current directory into folders, and a `challenge.json` file is created as well:
+This script downloads everything into the current directory into folders, and a `challenge.json` file with the challenges is created as well:
 
 ```json
 [

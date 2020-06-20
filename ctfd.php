@@ -73,7 +73,7 @@
 			mkdir($folder_name);
 			foreach ($chall_info['data']['files'] as $file) {
 				preg_match("/\/files\/.+?\/(.+?)\?token/", $file, $filename);
-				echo "  -> Downloading: {$filename[1]}\r\n";
+				echo "  -> Downloading: {$filename[1]}", PHP_EOL;
 				file_put_contents("{$folder_name}/{$filename[1]}", fopen("{$LOGIN['url']}{$file}", 'r', false, $context));
 				$chall['file'][] = $filename[1];
 			}
