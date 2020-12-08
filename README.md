@@ -5,11 +5,16 @@ Online CTFs are common way to learn to learn cybersecurity skills. Unfortunately
 This scraper downloads all the challenges and files from a CTF server for archival purposes.
 
 ## Supported Platforms
+* CTF.SG
 * CTFd
 * Tomahawque
 
 ## Usage
 
+### CTF.SG
+Copy and paste the script into DevTools. A log will be shown in the console with all the extracted data after looping through all the challenges.
+
+### CTFd, Tomahawque
 You need to install [PHP](https://www.php.net). The script was tested on PHP 7.4.6 on Windows, but should work on other platforms as well. Input the metadata and your credentials, and let the magic happen.
 
 ```
