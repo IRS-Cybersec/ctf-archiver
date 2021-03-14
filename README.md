@@ -11,10 +11,10 @@ This scraper downloads all the challenges and files from a CTF server for archiv
 
 ## Usage
 
-### CTF.SG
+### CTF.SG.js
 Copy and paste the script into DevTools. A log will be shown in the console with all the extracted data after looping through all the challenges.
 
-### CTFd, Tomahawque
+### PHP Scripts
 You need to install [PHP](https://www.php.net). The script was tested on PHP 7.4.6 on Windows, but should work on other platforms as well. Input the metadata and your credentials, and let the magic happen.
 
 ```
@@ -63,3 +63,5 @@ This script downloads everything into the current directory into folders, and a 
 	}
 ]
 ```
+
+_Note: it is likely that CTF.SG's API endpoint has been incorrectly recorded_
